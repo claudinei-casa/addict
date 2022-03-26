@@ -32,15 +32,15 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # Django Applications
-    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
     # Local Applications
-    'users',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -88,11 +88,6 @@ if DEBUG:
             'OPTIONS': {
                 'read_default_file': str(BASE_DIR) + '/' + 'mysql-global.cnf',
             },
-            # "NAME": "addict",
-            # "USER": "cla",
-            # "PASSWORD": "5656",
-            # "HOST": "localhost",
-            # "PORT": "3306",
         }
     }
 else:
@@ -148,3 +143,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# User models
+AUTH_USER_MODEL = 'users.User'

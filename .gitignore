@@ -110,3 +110,6 @@ venv.bak/
 cython_debug/
 #cnf-config
 mysql-global.cnf
+
+#vscode
+.vscode
